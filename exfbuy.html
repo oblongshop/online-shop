@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="Logo/Oblong_ic.PNG" rel="shortcut icon">
+	<title>Form Pembelian</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body{
+background: url("Profile/Order.jpg"); no-repeat scroll;
+background-attachment:fixed;
+background-size: 100% 100%;
+min-height: 600px;
+}
+
+.container {
+  position: relative;
+}
+
+.centered {
+  position: absolute;
+  top: 500%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn-group .button {
+  background-color: #4CAF50; /* Green */
+  border: 1px solid green;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  float: left;
+}
+
+.btn-group .button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+.btn-group .button:hover {
+  background-color: #3e8e41;
+}
+</style>
+</head>
+
+<style>
+
+* {box-sizing: border-box;}
+
+/* Full-width input fields */
+input[type=text], input[type=email] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/*textarea*/
+textarea {
+	width: 100%;
+	height: 100px;
+	padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/*HP & Telephone*/
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  margin: 0 -16px;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+  padding: 0 16px;
+}
+
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=email]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0, 0.9);
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+
+</style>
+<body>
+
+<div class="container">
+  <div class="centered">
+    <fieldset>
+    <legend style="color:white; font-size:50px;">Form Pembelian Produk</legend><br><br>
+
+	<div class="btn-group">
+	  <button class="button" onclick="javascript:history.back()"><span ></span>Kembali</button>
+	  <button class="button" onclick="document.getElementById('id01').style.display='block'">Beli</button>
+	</div>
+	
+	</fieldset>
+  </div>
+</div>
+
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>Form Pemesanan Produk</h1>
+      <p>Tolong isi data pemesanan produk dibawah ini dengan lengkap.</p>
+      <hr>
+	  <label for="email"><b>Nama Lengkap</b></label>
+      <input type="text" placeholder="Enter Name" name="nama"required>
+	  
+      <label for="email"><b>Email</b><b></label>
+      <input type="email" placeholder="Enter Email" name="email" required>
+	  
+	  <div class="row">
+		  <div class="col-50">
+			  <label for="hp"><b>Handphone</label>
+			  <input type="text" placeholder="Enter No. Handphone" name="hp" required>
+		  </div>
+		  
+		  <div class="col-50">
+			  <label for="telpon"><b>Telephone</label>
+			  <input type="text" placeholder="Enter No. Telephone" name="telpon">
+		  </div>
+	  </div>
+
+      <label for="alamat"><b>Alamat</b></label>
+      <textarea name="alamat" placeholder="Enter Address" required></textarea>
+
+      <label for="detail"><b>Detail</b></label>
+      <textarea name="detail" placeholder="Enter Detail.... Kaos.... Ukuran : XL,dll... Warna : Hitam,dll..." required></textarea>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Order</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+
+</html>
